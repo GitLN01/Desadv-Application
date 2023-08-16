@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This appplication enables users to interact with DESADV data extracted from CSV files.">
+    <title>DESADV Application</title>
+    <link rel = "icon" href = "img/avnet.jpg" type = "image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/external.css">
+</head>
+<body class="d-flex flex-column min-vh-100" onload="getWeatherData()">
+    
+    <!--NAVBAR-->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <img src="img/avnet.jpg" width="45px" alt="avnet logo">&#9;DESADV Application
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./about-project.html">About Project</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./dashboard.html">Dashboard</a>
+                  </li>            
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div class="row">
+            <div class="col-12 pb-4 pt-2 mb-5 mt-3">
+
+              <!-- CAROUSEL -->
+              <div id="carouselSlide" class="carousel slide" data-bs-ride="carousel">
+
+                <!-- Images with captions -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active" data-bs-interval="4000">
+                    <div class="carouselImage">
+                      <img src="img/carousel1.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-caption">
+                      <h1>Welcome!</h1>
+                      <p>"Programming is the art of telling another human what one wants the computer to do." - Donald Knuth</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="4000">
+                    <div class="carouselImage">
+                      <img src="img/carousel2.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-caption">
+                      <h1>Welcome!</h1>
+                      <p>"Code is like humor. When you have to explain it, it's bad." - Cory House</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="4000">
+                    <div class="carouselImage">
+                      <img src="img/carousel3.png" class="d-block w-100">
+                    </div>
+                    <div class="carousel-caption">
+                      <h1>Welcome!</h1>
+                      <p>"Good code is its own best documentation." - Steve McConnell</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item" data-bs-interval="4000">
+                    <div class="carouselImage">
+                      <img src="img/carousel4.jpg" class="d-block w-100">
+                    </div>
+                    <div class="carousel-caption">
+                      <h1>Welcome!</h1>
+                      <p>"Code is like wine: it has to mature." - Ryan Dahl</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Control buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselSlide" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselSlide" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+
+            <!--CONTENT-->
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-3 m-3">
+                  <div class="container" id="weatherDataCard">
+                  <!-- <div class="card cardHover ms-auto me-auto" style="max-width: 540px;">
+                    <div class="card-header">
+                      <h5 class="card-title text-center mt-2"><b>Weather in ${weatherData.name}</b></h5>
+                    </div>
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="${getWeatherIcon(weatherData.cod)}" class="img-fluid rounded-start ps-5 pt-4" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <p class="card-text">Temperature: 0 °C</p>
+                            <p class="card-text">Humidity:0 %</p>
+                            <p class="card-text">Air Pressure: 0hPa</p>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                      <p class="card-text"><small class="text-muted">1.1.2023</small></p>
+                    </div>
+                  </div> -->
+                  </div>
+                </div>
+                <div class="col-8 m-3">
+                  <div class="card">
+                  <div class="card-header">
+                    <h5 class="text-center mt-2 text-bold"><b>What is a DESADV?</b></h5>
+                  </div>
+                  <div class="card-body">
+                    <p><b>DESADV (DESpatch ADVice)</b> is an electronic packing slip, which contains delivery and shipment information.
+                      A DESADV message is normally sent from the supplier to the customer, however, they can also be used with a
+                      separate logistics service provider who may then send the DESADV on behalf of the supplier.
+                    </p>
+                    <p>The DESADV message typically contains the following information:
+                      <ul>
+                        <li><b>Identification Numbers:</b> Unique identifiers such as Despatch Advice number, Order number, or Shipment number.</li>
+                        <li><b>Dates and Times:</b> Information about the despatch date, expected delivery date, and other relevant time-related details.</li>
+                        <li><b>Parties Involved:</b> Names and addresses of the sender, recipient, and other relevant parties involved in the shipment.</li>
+                        <li><b>Product Details:</b> Information about the goods being shipped, including product codes, descriptions, quantities, and packaging details.</li>
+                        <li><b>Logistics Information:</b> Details about the transportation method, carrier, tracking numbers, and any special handling instructions.</li>
+                        <li><b>Financial Information:</b> In some cases, the DESADV message may include invoicing or payment details.</li>
+                      </ul>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+
+      <!--DESCRIPTION-->
+        <div class="container-fluid">
+          <div class="row mb-5">
+              <div class="col-12">
+                  <div class="card my-3 mx-5">
+                      <h3 class="card-header text-center pt-3">Welcome to DESADV Data Visualization and Analysis App!</h3>
+                      <div class="card-body"> 
+                        <p>
+                          Our application offers an intuitive platform for users to seamlessly visualize and interact with inbound 
+                          DESADV data related to the goods we receive. Extracted from CSV files, this data provides valuable insights 
+                          that can be accessed and analyzed through our user-friendly interface. Whether you're a logistics manager, 
+                          warehouse operator, or data enthusiast, our app empowers you to make informed decisions with ease.
+                        </p>
+                        <p><b>What can you do with our app?</b></p>
+                          <p>
+                            <ul>
+                              <li>
+                                Visualize DESADV Data: Our app allows you to transform raw CSV files into meaningful visualizations. Explore your data through various chart types,
+                                graphs, and tables to gain a deeper understanding of the goods received.
+                              </li>
+                              <li>
+                                Interact with Data: Dive into specific data points and apply filters to focus on the information that matters most to you. With interactive features,
+                                you can make data-driven decisions effortlessly.
+                              </li>
+                              <li>Seamlessly Access Data: The app automatically integrates newly received CSV files, ensuring that you always have access to the latest information. 
+                                No need for manual imports, it's all taken care of.
+                              </li>
+                              <li>
+                                Easy-to-Use Interface: We've crafted an intuitive interface that requires no technical expertise. Simply upload your CSV files, and our app will handle
+                                the rest, guiding you through data exploration effortlessly.
+                              </li>
+                              <li>
+                                Flexibility in Technology: As a user, you don't need to worry about the technicalities. Our app runs smoothly in a Docker container, providing a
+                                hassle-free experience.
+                              </li>
+                            </ul>
+                          </p>
+                          <p><b>Ready to get started?</b></p>
+                          <p>
+                            <ul>
+                              <li>Step 1: Sign in to your account or create a new one if you haven't already. Don't worry; we'll guide you through the process.</li>
+                              <li>Step 2: Upload your DESADV CSV files. Our app will securely process your data, keeping it safe and accessible whenever you need it.</li>
+                              <li>Step 3: Explore and Visualize: Once your data is uploaded, dive into the world of data visualization. Our interactive charts analyzed
+                              graphs will help you make sense of the numbers, uncover trends, and gain valuable insights.</li>
+                              <li>Step 4: Analyze with Ease: Apply filters and adjust parameters to focus on specific aspects of your data. Our app empowers you to analyze data your way.</li>
+                              <li>Step 5: Stay Up-to-date: You can count on our app to automatically integrate any new CSV files, so you're always working with the latest data.</li>
+                              <li>Step 6: Have Fun! Data analysis doesn't have to be tedious. Enjoy the process of discovering hidden patterns and making informed decisions for your business.</li>
+                              Remember, this app is all about putting the power of data in your hands without any hassle. So, dive in, explore, and unlock the potential of your DESADV data like never before.  
+                            </ul><br>
+                            <b>&nbsp;&nbsp;Happy analyzing!</b>
+                          </p>                            
+                      </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </main>
+      
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light mt-auto">
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h3 class="mb-3"><b>Bootstrap 5</b></h3>
+            <p>
+              This project was made for purposes of LevelUp Graduate Program, held by Avnet/Brezna.
+            </p>
+          </div>
+    
+          <div class="col-md-8 ml-5">
+            <h3 class="mb-3"><b>Links</b></h3>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="index.html" class="text-decoration-none">Home</a></li>
+              <li class="mb-2"><a href="about-project.html" class="text-decoration-none">About Project</a></li>
+              <li class="mb-2"><a href="dashboard.html" class="text-decoration-none">Dashboard</a></li>
+              <li class="mb-2"><a href="contact.html" class="text-decoration-none">Contact</a></li>
+             </ul>
+          </div>
+        </div>
+      </div>
+      <div class="bg-success text-center py-3">
+        © 2023 Learn-fast
+      </div>
+    </footer>
+    
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

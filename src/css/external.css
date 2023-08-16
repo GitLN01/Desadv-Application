@@ -1,0 +1,65 @@
+/* Card hover effect */
+
+.cardHover 
+{
+    transition: 0.3s;
+}
+
+.cardHover:hover 
+{
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.nav .nav-link 
+{
+    color: white;
+}
+
+.sidebar ul li:hover 
+{
+    background-color: #1e1e1e;
+    border-radius: 2vh;
+    color:white;
+}
+
+.sidebar ul li
+{
+    width: 80%;
+}
+
+.sidebar h2
+{
+    color:white;
+    font-size: 2.6em;
+}
+
+@media only screen and (max-width: 900px) 
+{
+    .sidebar
+    {
+        text-align: center;
+    }
+}
+
+table, th, td
+{
+    color:lightgray;
+}
+
+
+thead
+{
+    background-color: #252526;
+}
+
+td:hover
+{
+    background-color: #252526;
+    color:white;
+}
+
+th:hover
+{
+    color:white;
+}

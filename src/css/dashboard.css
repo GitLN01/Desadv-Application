@@ -1,0 +1,92 @@
+body 
+{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    background-color: #252526;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5 
+{
+    color: lightgray;
+}
+
+.codeText 
+{
+    font-size: 0.8em;
+    background-color: #252526;
+}
+
+p 
+{
+    color: lightgray;
+}
+
+/* CARDS WITH CONTENT */
+
+.card
+{
+    background-color: #333333;
+    color: #d3d3d3;
+    font-size:larger;
+    border: 2px solid black;
+} 
+
+.card-header
+{
+    background-color: #252526;
+    color: white;
+}
+
+.card-text 
+{
+    text-align: justify;
+    font-size: 0.9em;
+}
+
+.card-footer
+{
+    background-color: #252526;   
+}
+
+/* MODALS */
+
+.modal-content 
+{
+    background-color: #333333;
+    color: #d3d3d3;
+}
+
+.dark-background 
+{
+    background-color: #1e1e1e;
+}
+
+.nav .nav-link 
+{
+    color: lightgray;
+}
+
+.card-example 
+{
+    width: 18em;
+}
+
+.sidebar ul li:hover 
+{
+    background-color: #1e1e1e;
+    border-radius: 1.5vh;
+}
+
+.sidebar ul li
+{
+    width: 80%;
+
+}
+
+@media only screen and (max-width: 990px) 
+{
+    .sidebar
+    {
+        text-align: center;
+    }
+}

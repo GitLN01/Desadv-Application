@@ -1,0 +1,32 @@
+footer 
+{ 
+  padding-bottom: 2em;
+  z-index: 2;
+}
+
+footer ul li 
+{
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+footer ul li a 
+{
+  color: lightgray;
+  font-size: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+footer ul li a:hover 
+{
+  color: green;
+} 
+
+@media (max-width: 770px) 
+{
+  footer ul li 
+  {
+    display: block;
+    margin-bottom: 1em;
+  }
+}

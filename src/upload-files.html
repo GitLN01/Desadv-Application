@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="This appplication enables users to interact with DESADV data extracted from CSV files.">
+  <title>DESADV Application</title>
+  <link rel="icon" href="img/avnet.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <link rel="stylesheet" href="./css/external.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+
+  <!--NAVBAR-->
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="img/avnet.jpg" width="45px" alt="avnet logo">&#9;DESADV Application
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about-project.html">About Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="./dashboard.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <!-- MAIN -->
+  <main>
+    
+    <div class="container-fluid">
+      <div class="row">
+
+        <!--SIDEBAR-->
+        <div class="col-2 sidebar" style="background-color: #333333;">
+          <div class="position-fixed" style="width:inherit;">
+              <div class="container mt-4 mb-2">
+                <h2 class="text-center p-1 d-none d-sm-none d-lg-inline">Content</h2>
+              </div>
+                <ul class="nav nav-pills flex-column w-100 mt-3">
+                  <li class="nav-item py-1">
+                    <a class="nav-link" href="./dashboard.html">
+                      <svg width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 12C12 11.4477 12.4477 11 13 11H19C19.5523 11 20 11.4477 20 12V19C20 19.5523 19.5523 20 19 20H13C12.4477 20 12 19.5523 12 19V12Z" stroke="white" stroke-width="2" stroke-linecap="round"></path> <path d="M4 5C4 4.44772 4.44772 4 5 4H8C8.55228 4 9 4.44772 9 5V19C9 19.5523 8.55228 20 8 20H5C4.44772 20 4 19.5523 4 19V5Z" stroke="white" stroke-width="2" stroke-linecap="round"></path> <path d="M12 5C12 4.44772 12.4477 4 13 4H19C19.5523 4 20 4.44772 20 5V7C20 7.55228 19.5523 8 19 8H13C12.4477 8 12 7.55228 12 7V5Z" stroke="white" stroke-width="2" stroke-linecap="round"></path> </g></svg>
+                      <span class="d-none d-sm-none d-lg-inline">
+                      &nbsp;Data overview</span></a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a class="nav-link" href="./upload-files.html">
+                      <svg width="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#fcfcfc"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 15L12 2M12 2L15 5.5M12 2L9 5.5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M8 22.0002H16C18.8284 22.0002 20.2426 22.0002 21.1213 21.1215C22 20.2429 22 18.8286 22 16.0002V15.0002C22 12.1718 22 10.7576 21.1213 9.8789C20.3529 9.11051 19.175 9.01406 17 9.00195M7 9.00195C4.82497 9.01406 3.64706 9.11051 2.87868 9.87889C2 10.7576 2 12.1718 2 15.0002L2 16.0002C2 18.8286 2 20.2429 2.87868 21.1215C3.17848 21.4213 3.54062 21.6188 4 21.749" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
+                      <span class="d-none d-sm-none d-lg-inline">
+                        &nbsp;Upload / Create</span></a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a class="nav-link" href="./details.html">
+                      <svg width="20px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M320 89.6h640v76.8H320V89.6z m0 768h640v76.8H320v-76.8z m-256-768h128v76.8H64V89.6z m256 384h640v76.8H320V473.6z m-256 0h128v76.8H64V473.6z m0 384h128v76.8H64v-76.8z" fill="#ffffff"></path></g></svg>
+                      <span class="d-none d-sm-none d-lg-inline">
+                        &nbsp;Details</span>
+                        </a>
+                  </li>
+                  <li class="nav-item py-1">
+                    <a class="nav-link" href="./about.html">
+                      <svg width="20px" fill="#ffffff" viewBox="0 0 128 128" id="Layer_1" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M64,1C29.3,1,1,29.3,1,64s28.3,63,63,63s63-28.3,63-63S98.7,1,64,1z M64,119C33.7,119,9,94.3,9,64S33.7,9,64,9 s55,24.7,55,55S94.3,119,64,119z"></path> <rect height="40" width="8" x="60" y="54.5"></rect> <rect height="8" width="8" x="60" y="35.5"></rect> </g> </g></svg>
+                      <span class="d-none d-sm-none d-lg-inline">&nbsp;About</span></a>
+                  </li>
+                </ul>
+              </div>
+          </div>
+
+          <!--CONTENT-->
+
+          <div class="col-10">
+            <div class="container">
+              <div class="row my-5">
+                <h1>CSV File Uploader</h1>
+                <input type="file" id="csvFileInput" accept=".csv">
+                <button id="uploadButton">Upload CSV</button>
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const csvFileInput = document.getElementById('csvFileInput');
+                        const uploadButton = document.getElementById('uploadButton');
+                        
+                        uploadButton.addEventListener('click', () => {
+                            const file = csvFileInput.files[0];
+                            if (file) {
+                                const formData = new FormData();
+                                formData.append('csvFile', file);
+                                
+                                fetch('/upload', {
+                                    method: 'POST',
+                                    body: formData
+                                })
+                                .then(response => response.json())
+                                .then(data => {
+                                    console.log('File uploaded:', data);
+                                })
+                                .catch(error => {
+                                    console.error('Error uploading file:', error);
+                                });
+                            }
+                        });
+                    });
+                </script>
+              </div>
+          </div>
+      </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-light mt-auto">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <h3 class="mb-3"><b>Bootstrap 5</b></h3>
+          <p>
+            This project was made for purposes of LevelUp Graduate Program, held by Avnet/Brezna.
+          </p>
+        </div>
+  
+        <div class="col-md-8 ml-5">
+          <h3 class="mb-3"><b>Links</b></h3>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="index.html" class="text-decoration-none">Home</a></li>
+            <li class="mb-2"><a href="about-project.html" class="text-decoration-none">About Project</a></li>
+            <li class="mb-2"><a href="dashboard.html" class="text-decoration-none">Dashboard</a></li>
+            <li class="mb-2"><a href="contact.html" class="text-decoration-none">Contact</a></li>
+           </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bg-success text-center py-3">
+      © 2023 Learn-fast
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js-backend/connection.js"></script>
+  <script src="js-backend/server.js"></script>
+  <script src="js-backend/upload.js"></script>
+  <script src="js-backend/visualization.js"></script>
+</body>
+
+</html>

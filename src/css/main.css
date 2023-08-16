@@ -1,0 +1,77 @@
+body
+{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    background-color: #1E1E1E;
+    height: 100%;
+    color:lightgray;
+    overflow-x: hidden;
+}
+
+/* Cards */
+
+.card
+{
+    background-color: #333333;
+    color: #d3d3d3;
+    font-size:larger;
+    border: 2px solid black;
+} 
+
+.card-header
+{
+    background-color: #252526;
+    color: white;
+}
+
+.card-text 
+{
+    text-align: justify;
+    font-size: 0.9em;
+}
+
+.card-footer
+{
+    background-color: #252526;   
+}
+
+.card-footer a 
+{
+    font-size: 1em;
+}
+
+/* Carousel */
+
+#carouselSlide h1 
+{
+    position: relative;
+    font-size: 8em;
+    font-weight: 200;
+}
+
+.carousel-caption h1
+{
+    font-size: 1.2em;
+    top: -60%;
+}
+
+.carousel-caption p
+{
+    font-size: 1.4em;
+}
+
+.carousel-caption 
+{
+    position: absolute;
+    top: 50%;
+}
+
+.carouselImage 
+{
+    height: 500px;
+}
+
+.carouselImage img 
+{
+    width: 100%;
+    height: 100%;
+}

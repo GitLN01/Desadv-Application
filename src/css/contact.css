@@ -1,0 +1,52 @@
+html 
+{
+    box-sizing: content-box;
+}
+
+body
+{
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
+    background-image: url('../img/world-map.jpg');
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    overflow-x: hidden;
+    height: 100%;
+    display: flex;
+}
+
+#form
+{
+    width:100%;
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1600px) 
+{
+    #footerNav a 
+    {
+        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-width: 1400px) 
+{
+    #footerNav a 
+    {
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (min-width: 1120px) and (max-width: 1400px) 
+{
+    #footerNav a 
+    {
+        font-size: 0.6em;
+    }
+}
+
+@media only screen and (max-width: 1120px) 
+{
+    #footerNav a 
+    {
+        font-size: 0.5em;
+    }
+}
